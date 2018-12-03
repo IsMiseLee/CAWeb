@@ -36,6 +36,10 @@ build/Release
 node_modules/
 jspm_packages/
 
+node_modules/
+.next/
+*.log
+
 # TypeScript v1 declaration files
 typings/
 
