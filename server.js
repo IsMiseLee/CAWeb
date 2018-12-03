@@ -1,6 +1,3 @@
-// Server setup
-// See https://nextjs.org/learn/basics/server-side-support-for-clean-urls
-
 const express = require('express')
 const next = require('next')
 
@@ -11,6 +8,31 @@ const handle = app.getRequestHandler()
 app.prepare()
 .then(() => {
   const server = express()
+
+  server.get('/p/:id', (req, res) => {
+    const actualPage = '/post'
+    const queryParams = { title: req.params.id }
+    app.render(req, res, actualPage, queryParams)
+})
+
+server.get('/businessarticle/:title', (req, res) => {
+  const actualPage = '/businessarticle'
+  const queryParams = { id: req.params.index }
+  app.render(req, res, actualPage, queryParams)
+})
+
+server.get('/gamingarticle/:index', (req, res) => {
+  const actualPage = '/gamingPost'
+  const queryParams = { id: req.params.index }
+  app.render(req, res, actualPage, queryParams)
+})
+
+server.get('/sportarticle/:index', (req, res) => {
+  const actualPage = '/sportPost'
+  const queryParams = { id: req.params.index }
+  app.render(req, res, actualPage, queryParams)
+})
+
 
   server.get('*', (req, res) => {
     return handle(req, res)

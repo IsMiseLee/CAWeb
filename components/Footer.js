@@ -2,16 +2,13 @@
 const Footer = () => (
     <div>
         <footer>
-            <p>contact information: info@newssite.com</p>
+            <h2>contact information: info@newssite.com</h2>
         </footer>
         <style jsx>{`
-            footer {
-                background-color: #a19f9f;
-                max-width: 900px;
-                font-size: 0.8em;
+            h2 {
+               
+                max-width: 100%;
                 text-align: center;
-                color: #a19f9f;
-                clear: both;
             }
         `}</style>
     </div> 

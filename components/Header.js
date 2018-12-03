@@ -1,15 +1,19 @@
 const Header = () => (
     <div>
-        <h2 className="title">My News Site</h2>
+        <h2 >Lee's Website</h2>
         <style jsx>{`
 
 
-            h2.title {
+            h2 {
+                text-align: center;
                 font-family: "Arial";
-                color: #535151;
-                padding: 5px;
+                color: Red;
+                background-color:#FFFFE0;
+                width:100%;
+               
+               
             }
-
+            
 
         `}</style>
     </div> 

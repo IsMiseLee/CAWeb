@@ -18,6 +18,19 @@ class Page extends Component {
                 {/* Render props passed to this Component */}
                 {this.props.children}
                 <Footer />
+
+                <style jsx>{`
+
+
+div{
+    background-color:#FFFFE0;
+   width :100%
+   height:100%;
+   padding-bottom:3em;
+   border:1px solid black;
+}
+
+`}</style>
             </div>
         );
     }
